@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Trebuchet MS", helvetica, sans-serif;
+    background: #ffffff;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    padding: 10px;
+}
+
+h3 {
+    font-size: 1.3em;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+#area_principal {
+    margin: 0 auto;
+    width: 60%;
+    background-color: rgb(235, 235, 235);
+    padding-right: 5px;
+}
+
+#area_lateral{
+    margin: 0 auto;
+    width: 20%;
+    height: 100%;
+    min-width: 140px;
+    padding-bottom: 15px;
+    float: left;
+    background-color: rgb(255, 242, 207);
+}
+
+#area_menu {
+    background-color: rgb(255, 204, 65);
+    color: white;
+    font-size: 1.15em;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+}
+
+.observacoes {
+    background-color: rgb(255, 242, 207);
+    border: 1em solid white;
+    padding: 15px;
+}
+
+.cabecalho {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.cor {
+    color: rgb(255, 204, 65);
+}
+
+.texto_principal {
+    background-color: white;
+    font-size: 1.2em;
+    padding: 50px;
+}
+
+.conteudo_lateral{
+    padding-top: 15px;
+}
+
+.texto_lateral{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+#area_menu .atual, #area_menu .atual a:hover {
+    background-color: rgb(78, 57, 0);
+}
+
+#area_lateral .atual, #area_lateral .atual a:hover {
+    background-color: rgb(252, 210, 92);
+    color: white;
+}
+
+#area_menu a {
+    transition: background-color 0.2s ease;
+}
+
+#area_menu a:link, #area_menu a:visited {
+    font-size: 1em;
+    padding: 5px;
+    padding-right: 50px;
+    padding-left: 50px;
+    color: rgb(255, 255, 255);
+}
+#area_menu a:hover {
+    background-color: rgb(225, 172, 27);
+    color: rgb(255, 255, 255);
+}
+
+#area_lateral a:link {
+    padding-left: 35px; 
+    padding-right: 154px;
+}
+
+#area_lateral a {
+    display: inline-block; /* ou block, dependendo do layout */
+    width: 100%;           /* valor fixo que você quer para o fundo */
+    padding: 2px 154px 2px 35px;
+    transition: background-color 0.2s ease;
+}
+
+#area_lateral a:hover {
+    background-color: rgb(255, 225, 144);
+}
+
+#area_lateral a:link, #area_lateral a:visited{
+    padding-left: 35px; 
+    padding-right: 154px;
+    box-sizing: border-box;
+    color: black;
+}
