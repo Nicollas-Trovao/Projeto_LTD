@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>TUtorial</title>
+</head>
+<body>
+
+    <div id="conteiner">
+
+        <div id="topo">
+            <div id="logo">
+                <a href="index.html">TUtorial</a>
+            </div>
+            <div class="topo-busca">
+                <input type="text" name="busca" placeholder="Buscar">
+                <i class="fas fa-search"></i>
+            </div>
+                <div id="cadastro">
+                    <a href="login.html" class="botao"><i class="fas fa-sign-in-alt"></i> Entrar</a>
+                    <a href="" class="botao destaque"><i class="fas fa-user-plus"></i> Cadastrar</a>
+                    
+                </div>
+            <div>
+                <ul>
+                    <li class="atual"><a href="">Robótica</a></li> 
+                    <li><a href="">Tópico</a></li> 
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li> 
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <button id="toggleSidebar">☰</button>
+
+<div id="sidebar">
+    <h2>Tutorial</h2>
+    <ul>
+        <li><a href="#">Introdução</a></li>
+        <li class="has-submenu">
+            <a href="#">Sintaxe <span class="arrow">▼</span></a>
+            <ul class="submenu">
+                <li><a href="#">Sintaxe Básica</a></li>
+                <li><a href="#">Sintaxe Avançada</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu">
+            <a href="#">Seletores <span class="arrow">▼</span></a>
+            <ul class="submenu">
+                <li><a href="#">Seletores Simples</a></li>
+                <li><a href="#">Seletores Compostos</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Como Usar</a></li>
+    </ul>
+
+    <script>
+        // Abrir/fechar submenu
+        document.querySelectorAll('.has-submenu > a').forEach(item => {
+            item.addEventListener('click', e => {
+                e.preventDefault();
+                const parent = item.parentElement;
+                parent.classList.toggle('open');
+        
+                // Trocar setinha
+                const arrow = item.querySelector('.arrow');
+                if (parent.classList.contains('open')) {
+                    arrow.textContent = '▲';
+                } else {
+                    arrow.textContent = '▼';
+                }
+            });
+        });
+        
+        // Abrir/fechar sidebar e empurrar o conteúdo
+        const toggleButton = document.getElementById('toggleSidebar');
+        const sidebar = document.getElementById('sidebar');
+        const body = document.body;
+        
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+            body.classList.toggle('sidebar-hidden');
+        });
+        </script>
+
+    </div>
+
+        <div id="conteudo">
+            <div id="conteudo_principal">
+                <h1>Robótica</h1>
+                <h2>Introdução</h2>
+                <p>
+                    Neste espaço, você vai mergulhar no universo da robótica — um campo fascinante onde mecânica, eletrônica e programação trabalham juntas para dar vida a ideias.
+                </p>
+
+                <div id="card-texto">
+                    <h2>Aqui, você encontrará:</h2>
+                    <p id="texto-atual">Tutoriais passo a passo para iniciantes e intermediários</p>
+
+                    <script>
+                        const textos = [
+                            "Dicas práticas para resolver problemas comuns",
+                            "Projetos inspiradores para colocar a mão na massa",
+                            "Conceitos essenciais explicados de forma simples",
+                        ];
+
+                        let indiceAtual = 0;
+
+                        function mudarTexto() {
+                            const texto = document.getElementById("texto-atual");
+
+                            texto.style.opacity = 0;
+
+                            setTimeout(() => {
+                            indiceAtual = (indiceAtual + 1) % textos.length;
+                            texto.innerText = textos[indiceAtual];
+                            texto.style.opacity = 1;
+                            }, 500);
+                        }
+
+                        setInterval(mudarTexto, 5000);
+                    </script>
+
+                </div>
+
+                <p>Seja para hobby, estudo ou desenvolvimento profissional, 
+                a robótica abre portas para um mundo de possibilidades — e estamos aqui para te acompanhar nessa jornada.
+                </p>
+                <br>
+                <p>
+                Explore os tópicos e comece a construir hoje o futuro que você imagina.
+                </p>
+                <br>
+                <h2>Com Duvidas de por Onde Começar?</h2>
+                <br>
+                <h3>Que Tal um Pequeno Questionario?</3>
+
+                    <div id="questionario">
+                        <h2>Com que nível você está começando?</h2>
+                        <button onclick="redirecionar('iniciante')">Estou começando do zero</button>
+                        <button onclick="redirecionar('intermediario')">Já conheço o básico</button>
+                        <button onclick="redirecionar('avancado')">Tenho experiência</button>
+                    </div>
+
+                    <script>
+                        function redirecionar(nivel) {
+                            if (nivel === 'iniciante') {
+                              window.location.href = "#conceitos_basicos";
+                            } else if (nivel === 'intermediario') {
+                              window.location.href = "#projetos_intermediarios";
+                            } else if (nivel === 'avancado') {
+                              window.location.href = "#desafios_avancados";
+                            }
+                          }
+                        </script>
+                    
+                    <div id="questionario">
+                    <h2>Qual tipo de projeto você gostaria de começar?</h2>
+                    <button onclick="redirecionar2('iniciante')">Circuitos simples (ex.: acender LEDs, ligar motores)</button>
+                    <button onclick="redirecionar2('intermediario')">Pequenos robôs (ex.: robô seguidor de linha)</button>
+                    <button onclick="redirecionar2('avancado')">Projetos de automação (ex.: sensores de presença, controle de luzes)
+                    </button>
+                    </div>
+
+                    <script>
+                        function redirecionar2(nivel) {
+                            if (nivel === 'iniciante') {
+                              window.location.href = "#Circuitos_simples";
+                            } else if (nivel === 'intermediario') {
+                              window.location.href = "#Pequenos_robos";
+                            } else if (nivel === 'avancado') {
+                              window.location.href = "#Projetos_de_automacao";
+                            }
+                          }
+                        </script>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="rodape">
+        <p>&copy; Copyright 2025 by Estácio. All Rights Reserved.</p>
+    
+        <div id="contatos">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:contato@estacio.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+
+</body>

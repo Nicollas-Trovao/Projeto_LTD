@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/SEU_ID_AQUI.js" crossorigin="anonymous"></script>
+
+    <title>TUtorial</title>
+</head>
+<body>
+
+    <div id="conteiner" class="home">
+
+        <div id="topo">
+            <div id="logo">
+                TUtorial
+            </div>
+            <div class="topo-busca">
+                <input type="text" name="busca" placeholder="Buscar">
+                <i class="fas fa-search"></i>
+            </div>
+                <div id="cadastro">
+                    <a href="login.html" class="botao"><i class="fas fa-sign-in-alt"></i> Entrar</a>
+                    <a href="" class="botao destaque"><i class="fas fa-user-plus"></i> Cadastrar</a>
+                    
+                </div>
+            <div>
+                <ul>
+                    <li><a href="robotica_inicio.html">Robótica</a></li> 
+                    <li><a href="">Tópico</a></li> 
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li> 
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li>
+                    <li><a href="">Tópico</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="caixa_busca">
+        <div id="busca_principal">
+            <h1>Vamos Aprender Algo?</h1>
+            <h2>Com Certeza Temos O que Precisa</h2>
+            <div class="campo-busca">
+                <input type="text" name="busca" placeholder="Algum Tópico em Mente?">
+                <i class="fas fa-magnifying-glass"></i>
+            </div>
+        </div>
+        </div>
+
+        <div id="conteudo">
+            <div id="conteudo_principal">
+                <div id="caixa">
+                    <div id="card-texto">
+                        <p id="texto-atual">Bem-vindo ao nosso site!</p>
+                        <button onclick="mudarTexto()">Próximo</button>
+                    </div>
+
+                    <script>
+                        const textos = [
+                            "Bem-vindo ao nosso site!",
+                            "Explore nossos tutoriais incríveis!",
+                            "Aprenda robótica de maneira simples!",
+                            "Descubra novos projetos agora!",
+                            "Domine a eletrônica passo a passo!"
+                        ];
+
+                        let indiceAtual = 0;
+
+                        function mudarTexto() {
+                            const texto = document.getElementById("texto-atual");
+
+                            texto.style.opacity = 0;
+
+                            setTimeout(() => {
+                            indiceAtual = (indiceAtual + 1) % textos.length;
+                            texto.innerText = textos[indiceAtual];
+                            texto.style.opacity = 1;
+                            }, 500);
+                        }
+
+                        setInterval(mudarTexto, 5000);
+                    </script>
+
+            </div>
+
+            <div id="primario">
+                <div id="caixa">
+                <h2>Tópicos Mais Recentes</h2>
+                <ul>
+                    <li>
+                        <a href="robotica_inicio.html">
+                            <img src="img/Robótica.png" width="80"> 
+                            <h3>Robótica</h3>
+                            <p>Veja como Montar...
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/Robótica2.png" width="80">
+                            <h3>Tópico</h3>
+                            <p>Veja como...
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/Robótica.png" width="80">
+                            <h3>Tópico</h3>
+                            <p>Veja como...
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/Robótica2.png" width="80">
+                            <h3>Tópico</h3>
+                            <p>Veja como...
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+                </div>
+
+                <div id="caixa">
+                    <h2>Conteudos Mais Recentes</h2>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="img/Computação.png" width="80">   
+                                    <h3>Como Montar...</h3>
+                                    <p>Veja um Passo a Passo de como...
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="img/Computação.png" width="80">   
+                                    <h3>Conteudo</h3>
+                                    <p>Veja como...
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="img/Computação.png" width="80">  
+                                    <h3>Conteudo</h3>
+                                    <p>Veja como...
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="img/Computação.png" width="80">  
+                                    <h3>Conteudo</h3>
+                                    <p>Veja como...
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+            </div>
+
+
+            <div id="secundario">
+                <div id="caixa">
+                <h2>Tópicos Mais Populares</h2>
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="img/Computação.png" width="80">  
+                            <h2>Tópico</h2>
+                            <h3>Conteudo Mais Popular</h3>
+                            <p>Veja como...
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/Computação.png" width="80">  
+                            <h2>Tópico</h2>
+                            <h3>Conteudo Mais Popular</h3>
+                            <p>Veja como...
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/Computação.png" width="80">  
+                            <h2>Tópico</h2>
+                            <h3>Conteudo Mais Popular</h3>
+                            <p>Veja como...
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="robotica_inicio.html">
+                            <img src="img/Robótica2.png" width="80"> 
+                            <h2>Robótica</h2>
+                            <h3>Conteudo Mais Popular</h3>
+                            <p>Veja como Montar...
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div id="rodape">
+        <p>&copy; Copyright 2025 by Estácio. All Rights Reserved.</p>
+    
+        <div id="contatos">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:contato@estacio.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>
